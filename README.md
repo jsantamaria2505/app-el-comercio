@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### First Commit
+
+Se realizo este commit, para subir los archivos de react a github
+
+### Agregando e importando libreria MDB
+Se utilizo el framework de diseño Material Design for Bootstrap, para ahorrar tiempo en la creaciones de los componentes necesarios tales como Nav, card, footer.
+
+### Version 1.0 diseño de la estructura en App.js
+Se realizo el diseño de las interfaces y agrego estilos personalizados a algunos componentes.
