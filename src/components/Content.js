@@ -9,7 +9,7 @@ export default class Content extends Component {
     render() {
         const {body} = this.props;
         return (
-            <div style={{backgroundColor: '#f2f2f8'}} className=" light justify-content-center ">
+            <div style={{backgroundColor: ''}} className=" light justify-content-center ">
                 {body}
             </div>
         )

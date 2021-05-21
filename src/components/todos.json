@@ -1,0 +1,15 @@
+{
+    "todos":[
+        {
+            "id": 1,
+            "type": "Standard",
+            "price": "29.00"
+        },
+        {
+            "id": 2,
+            "name": "Premium",
+            "price": "59.00"
+        }
+
+    ]
+}

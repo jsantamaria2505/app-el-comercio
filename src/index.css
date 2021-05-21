@@ -2,6 +2,15 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
+.rcontainer {
+  margin: auto;
+  border-radius: 50px;
+  background: #cccccc;
+  padding: 20px;
+  width: 102px;
+  height: 102px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

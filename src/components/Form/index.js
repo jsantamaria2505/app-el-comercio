@@ -7,8 +7,37 @@ import {
 import {Link} from 'react-router-dom';
 
 export default class index extends Component {
+
+    state = {
+        form:{
+            id: 0,
+            nombres: '',
+            numTarjeta: '',
+            fechaExp: '',
+            cvc: ''
+        }
+        
+    }
+
+    handleChange = async e => {
+        e.persist();
+        await this.setState({
+            form: {
+                ...this.state.form,
+                [e.target.name]: e.target.value
+            }
+        });
+        console.log(this.state.form);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+    } 
+
+
     render() {
             
+        const {form} = this.state;
 
         return (
             <div style={{padding:'60px'}}>
@@ -25,12 +54,22 @@ export default class index extends Component {
                         </MDBCardHeader>
 
                         <MDBCardBody>
-                            <MDBValidation className='row g-3' noValidate>
+                            <MDBValidation onSubmit={this.handleSubmit.bind(this)} className='row g-3' noValidate>
+                                <input
+                                    type="hidden"
+                                    name="id"
+                                    onChange={this.handleChange}
+                                    value={form.id}
+                                    className="form-control"
+                                    placeholder="Id"
+                                />
+
                                 <div style={{textAlign:'left'}} className='col-md-12'>
                                     <h6>Nombres y Apellidos</h6>
                                     <MDBInput
-                                    name='fname'
-                                    id='validationCustom01'
+                                    name='nombres'
+                                    onChange={this.handleChange}
+                                    value={form.nombres}
                                     required
                                     validation='Looks good!'
                                     />
@@ -38,8 +77,9 @@ export default class index extends Component {
                                 <div style={{textAlign:'left'}} className='col-md-12'>
                                     <h6>Numero de Tarjeta</h6>
                                     <MDBInput
-                                    name='fname'
-                                    id='validationCustom01'
+                                    name='numTarjeta'
+                                    onChange={this.handleChange}
+                                    value={form.numTarjeta}
                                     required
                                     validation='Looks good!'
                                     />
@@ -47,8 +87,9 @@ export default class index extends Component {
                                 <div style={{textAlign:'left'}} className='col-md-6'>
                                     <h6>F. Expira</h6>
                                     <MDBInput
-                                    name='fname'
-                                    id='validationCustom01'
+                                    name='fechaExp'
+                                    onChange={this.handleChange}
+                                    value={form.fechaExp}
                                     required
                                     validation='Looks good!'
                                     />
@@ -56,8 +97,9 @@ export default class index extends Component {
                                 <div style={{textAlign:'left'}} className='col-md-6'>
                                     <h6>CVC</h6>
                                     <MDBInput
-                                    name='fname'
-                                    id='validationCustom01'
+                                    name='cvc'
+                                    onChange={this.handleChange}
+                                    value={form.cvc}
                                     required
                                     validation='Looks good!'
                                     />
